@@ -18,18 +18,20 @@ void main() {
     int num, cont, lista[max], c, d, i, j, a, cont1 = 0;
     printf("Digite um número para a matriz: ");
     scanf("%d", &num);
-    cont = (2 * (num-1)) + 1; // DEFININDO ALTURA/LARGURA DA MATRIZ 
+    cont = (2 * (num-1)) + 1; // DEFININDO ALTURA/LARGURA DA MATRIZ
     for(i=1; i<cont+1; ++i){         // LINHA DA MATRIZ
         for(j=1; j<cont+1; ++j){    // COLUNA DA MATRIZ
             cont1=cont;
+            int cont2=1;
             for(d=0; d<num; d++){ // DEFININDO O VALOR A SER IMPRIMIDO
-                if(i==d+1 || i==cont1 || j==d+1 || j==cont1){
-                    a = d+1;
+                if(i==cont2 || i==cont1 || j==cont2 || j==cont1){
+                    a = cont2;
                     break;
-                } else {
+                } else{
                     cont1 = cont1-1;
-                }     
-            }           
+                    cont2 = cont2+1;
+                }    
+            }          
             printf("%d ", a);
         }
         printf("\n");
@@ -45,5 +47,5 @@ pra digitar o número 2 não é muito diferente, linha 2
 ou coluna 2, ou linha 4 ou coluna 4
 Percebe-se que da mesma forma que o primeiro número aumenta
 de 1 em 1, o outro reduz de 1 em 1, Nisso foi só criar um
-um laço com a variável "d" que aumenta e a "cont1" que reduz
+um laço com a variável "cont2" que aumenta e a "cont1" que reduz
 colocando dentro a estrutura condicional.*/
