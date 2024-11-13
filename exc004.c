@@ -11,15 +11,25 @@ INCOMPLETO
 #define max 10
 
 int main() {
-    int matricula, matriculas[max], notas[max], nota, c;
+    int matricula, matriculas[max], notas[max], nota, c, nmaior = 0;
     srand(time(NULL));
-    nota = rand()%100;
-    matricula = rand() %89999 + 10000;
+    
+    
     for(c=0; c<max; ++c){
+        nota = rand()%100;
+        matricula = rand() %899999 + 100000;
         notas[c] = nota;
         matriculas[c] = matricula; 
     }
-    printf("%d %d", matricula, nota);
+    for(c=0; c<max; ++c){
+        if (notas[c] > notas[nmaior]){
+            nmaior = c;
+        }
+    }
+    for(c=0; c<max; ++c){
+        printf("%d ", notas[c]);
+    }
+    printf("%d %d", matriculas[nmaior], notas[nmaior]);
     
     return 0;
 }
