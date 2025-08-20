@@ -1,0 +1,7 @@
+A programação em C e poderosa.
+Ela permite acessar arquivos, memoria e dispositivos.
+
+Com fgetc, podemos ler caractere por caractere.
+Isso ajuda a entender melhor como funcionam os arquivos.
+
+Fim do teste.
